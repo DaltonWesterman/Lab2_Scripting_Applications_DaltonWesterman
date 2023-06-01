@@ -43,16 +43,14 @@ def main():
     add_game(team_info, 'Bruins', 12, 0)
     print_opponents(team_info)
 
-    def print_cheer(team):
+def print_cheer(team):
     """Prints a cheer for the team
 
     Args:
         team (dict): Team information data structure
     """
     # TODO: Print a cheer for the team that contains the team name and city 
-
-
-    print(f"Let's go {team['city']} {team['name']}!")
+    print()
 
 def print_roster(team):
     """Prints a dash list of all player names
@@ -61,12 +59,8 @@ def print_roster(team):
         team (dict): Team information data structure
     """
     # TODO: Print a heading
-    print(f"\n{team['city']} {team['name']} team roster:")
-
     # TODO: Print a dash list of all player names
-    for player_name in team ['players']:
-        print(f'- {player_name}')
-
+    print()
 
 def add_players_to_team(team, new_players):
     """Adds one or more players to the team
@@ -76,16 +70,9 @@ def add_players_to_team(team, new_players):
         new_players (list): Names of players to add
     """
     # TODO: Append new players to the list
-    team['players'].extend(new_players)
     # TODO: Capitalize first letter of each players name
-    for i, player_name in enumerate (team['players']):
-        team['players'][i] = player_name.capitalize()
-
-
     # TODO: Sort the player list alphabetically
-    team['players'].sort()
-[10:58 AM]
-return
+    return
 
 def print_opponents(team):
     """Prints list of opponents the team has played a game against.
@@ -93,14 +80,8 @@ def print_opponents(team):
     Args:
         team (dict): Team information data structure
     """
-    print(f"\nThe {team['city']} {team['name']} have played a game against",end=' ')
-
-TODO: Print comma-separated list of opponent names
-    for i, game in enumerate (team['games:']):
-        if i < len(team['games']) - 1:
-            print(game['opponent'], end= ', ')
-    else:
-        print(game['opponent'], end= '.')
+    # TODO: Print comma-separated list of opponent names
+    print()
 
 def add_game(team, opp, gf, ga):
     """Adds one game to the team information data structure
@@ -111,15 +92,8 @@ def add_game(team, opp, gf, ga):
         gf (int): Goals for
         ga (int): Goals against
     """
-    new_game= {
-                'opponent': opp,
-                'goals for': gf,
-                'goals against': ga
-    }
-    team['games'].append(new_game)
-
+    # TODO: Append movie to list of favourite movies
     return
 
-if name == 'main':
+if __name__ == '__main__':
     main()
-
